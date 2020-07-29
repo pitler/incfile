@@ -10,7 +10,7 @@ How this works:
 
 The command send:post add to the queue a new job<br/>
 Then we start the jobs with   php artisan queue:work<br/>
-It will try to send the post request to the fake url (app/Jobs/SendPostJob.php)<br/>
+It will try to send the post request to the fake url (app/Jobs/SendPostJob.php), 5 times with 2 sec interval<br/>
 If we get a 200 repsonse, we can do whatevver we want <br/>
 If it failed we create a Notification to send an email to the admin to tell them that some post requests failed<br/>
 
